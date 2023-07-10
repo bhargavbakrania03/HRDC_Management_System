@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomination</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Boxicons CDN Links -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="nomination.css">
+    <!-- <script type="text/javascript" src="add_ancmnt.js"></script> -->
+    <style>
+        #lgid {
+            justify-items: center;
+            margin: 8px;
+            margin-top: 0px;
+            padding-top: 15px;
+        }
+
+        #mainI {
+            height: 100%;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        #mainTx {
+            justify-items: center;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SIDE NAVBAR -->
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <!-- <i class='bx bxl-c-plus-plus'></i> -->
+                <div class="logo_name">
+                    <img src="charusat_transparent.png" alt="" style="width:180px; height: 49px;" id="lgid">
+                </div>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <i class="bx bx-search"></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip"><b>Search...</b></span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="links_name">DashBoard</span>
+                </a>
+                <span class="tooltip"><b>DashBoard</b></span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cross"></i>
+                    <span class="links_name">Create Event</span>
+                </a>
+                <span class="tooltip"><b>Create Event</b></span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-calendar-check"></i>
+                    <span class="links_name">SubEvent</span>
+                </a>
+                <span class="tooltip"><b>Sub Event</b></span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-calendar"></i>
+                    <span class="links_name">BatchWise Nomination</span>
+                </a>
+                <span class="tooltip"><b>Nomination</b></span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-certification"></i>
+                    <span class="links_name">Certificate</span>
+                </a>
+                <span class="tooltip"><b>Certificate</b></span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-user-check"></i>
+                    <span class="links_name">Attendance</span>
+                </a>
+                <span class="tooltip"><b>Attendance</b></span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-log-out"></i>
+                    <span class="links_name">Log Out</span>
+                </a>
+                <span class="tooltip"><b>Log Out</b></span>
+            </li>
+
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="./icons/1.png" alt="">
+                    <div class="name_job">
+                        <div class="name">Prem Shahi</div>
+                        <div class="job">Web Desiner</div>
+                    </div>
+                </div>
+                <i class="bx bx-log-out" id="log_out"></i>
+            </div>
+        </div>
+    </div>
+    <!-- SIDE NAVBAR END -->
+
+    <div class="home_content">
+        <section class="announcement_section">
+            <div class="heading_announcement">
+                <h1>Nomination</h1>
+            </div>
+
+            <div class="form fieldspace" id="form">
+                <form name="form" method="post" onsubmit="return (validate())" id="form_no">
+                    <div class="form-group row ">
+
+                        <!-- Employee Name -->
+
+                        <label for="eventname" class="col-sm-4 col-form-label fieldspace"><strong>Employee
+                                Name</strong></label>
+                        <div class="col-sm-8 fieldspace">
+                            <textarea class="form-control" id="eventname" rows="1"></textarea>
+                        </div>
+
+                        <!-- Employee Id -->
+
+                        <label for="eventfocus" class="col-sm-4 col-form-label fieldspace"><strong>Employee Id
+                            </strong></label>
+                        <div class="col-sm-8 fieldspace">
+                            <textarea class="form-control" id="eventfocus" rows="1"></textarea>
+                        </div>
+
+                        <!-- Branch -->
+
+                        <label for="academicyear" class="col-sm-4 col-form-label fieldspace"><strong>Branch
+                            </strong></label>
+                        <div class="col-sm-5 fieldspace">
+                            <select class="form-control" id="academmicyear">
+                                <option value="CE">CE</option>
+                                <option value="IT">IT</option>
+                                <option value="CSE">CSE</option>
+                                <option value="CSE">EC</option>
+                                <option value="CSE">ME</option>
+                                <option value="CSE">CL</option>
+                                <option value="CSE">BSIT</option>
+                            </select>
+                        </div>
+
+                        <!-- Function Department -->
+
+                        <label for="academicyear" class="col-sm-4 col-form-label fieldspace"><strong>Function Department
+                            </strong></label>
+                        <div class="col-sm-5 fieldspace">
+                            <select class="form-control" id="academmicyear">
+                                <option value="CSPIT">CSPIT</option>
+                                <option value="DEPSTAR">DEPSTAR</option>
+                                <option value="I2IM">I2IM</option>
+                                <option value="ARCP">ARCP</option>
+                                <option value="RPCP">RPCP</option>
+                                <option value="MTIN">MTIN</option>
+                                <option value="CMPICA">CMPICA</option>
+                            </select>
+                        </div>
+
+                        <!--  Contact Number -->
+
+                        <label for="phone" class="col-sm-4 col-form-label fieldspace"><strong>Contact
+                                No</strong></label>
+                        <div class="col-sm-5 fieldspace">
+                            <input class="form-control" type="tel" id="phone" name="phone"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </div>
+
+                        <!-- Alternate Contact Number-->
+
+                        <label for="phone" class="col-sm-4 col-form-label fieldspace"><strong>Contact
+                                No. (2)</strong></label>
+                        <div class="col-sm-5 fieldspace">
+                            <input class="form-control" type="tel" id="phone" name="phone"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </div>
+
+
+                        <!-- Reporting Authority -->
+
+                        <label for="eventvenue" class="col-sm-4 col-form-label fieldspace"><strong>Reporting Authority
+                            </strong></label>
+                        <div class="col-sm-5 fieldspace">
+                            <textarea class="form-control" id="eventvenue" rows="2"></textarea>
+                        </div>
+
+                        <!-- Total Experience -->
+
+                        <label for="eventresourceperson" class="col-sm-4 col-form-label fieldspace"><strong>Total
+                                Experience
+                            </strong></label>
+                        <div class="col-sm-5 fieldspace">
+                            <textarea class="form-control" id="eventresourceperson" rows="1"></textarea>
+                        </div>
+
+                        <div class="col-sm-2 fieldspace">
+                            <select class="form-control" id="academmicyear">
+                                <option value="Years">Years</option>
+                                <option value="Months">Months</option>
+                            </select>
+                        </div>
+
+                        <!-- Total Teaching Experience -->
+
+                        <label for="eventresourceperson" class="col-sm-4 col-form-label fieldspace"><strong>Total
+                                Teaching Experience
+                            </strong></label>
+                        <div class="col-sm-5 fieldspace">
+                            <textarea class="form-control" id="eventresourceperson" rows="1"></textarea>
+                        </div>
+
+                        <div class="col-sm-2 fieldspace">
+                            <select class="form-control" id="academmicyear">
+                                <option value="Years">Years</option>
+                                <option value="Months">Months</option>
+
+                            </select>
+                        </div>
+
+                        <!-- Batch No 1 to 10 -->
+
+                        <label for="eventname" class="col-sm-4 col-form-label fieldspace"><strong>Batch
+                            </strong></label>
+                        <div class="col-sm-8 fieldspace">
+                            <textarea class="form-control" id="eventname" rows="5"></textarea>
+                        </div>
+
+                        <div class="container">
+                            <div class="col-md-12 text-center">
+                                <button type="button" class="btn btn-outline-dark fieldspace"
+                                    id="submit">Submit</button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search");
+        let counter = 0;
+        let count = 0;
+
+        btn.onclick = function () {
+            sidebar.classList.toggle("active");
+        }
+        searchBtn.onclick = function () {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+
+</body>
+
+</html>1
